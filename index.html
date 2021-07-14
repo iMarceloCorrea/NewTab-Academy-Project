@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto SPA - NewTab Academy</title>
+        <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+        <link rel="stylesheet" href="css/webfontkit-20210316-195009/stylesheet.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/media.css">
+        <script src="js/javascript.js"></script>
+        <script src="https://kit.fontawesome.com/12bfc7a935.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+       
+    </head>
+
+    <body>
+        <main>
+            <!-- header -->
+            <header>
+                <div class="wrapper">
+                    <!-- logo -->
+                    <img src="img/logo.png"/>
+                    <!-- page title -->
+                    <h1>Controle Financeiro</h1>
+                    <!-- menu hamburger -->                    
+                    <div class="responsive-menu">
+                        <div id="hamburger"></div>                           
+                        <div class="menubar">
+                            <ul>
+                                <li id="menu-x"><a href="">X</a></li>
+                                <li><a href="#" onclick="validarCampo(event)">Cadastro de transações</a></li>
+                                <li><a href="#" onclick="choiseFunction()">Salvar no servidor</a></li>
+                                <li><a href="" onclick="deletarTransacoes()">Limpar dados</a></li>               
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- final menu hamburger -->
+                </div>
+            </header>          
+            <div class="conteudo">
+                <div class="wrapper">
+                   
+                    <section class="transacao">
+                        <h2>Nova transação</h2>
+                        <!--------------------------------------------------INICIO DO FORMULARIO---------------------------------------------------------->
+                        <form id="form" action="index.html" onsubmit="validarCampo(event); return false">
+                            <div class="tipot"> <!------------------------------------------DIV INICIO TIPO DE TRANSACAO-->
+                                <label for="tipotr">Tipo de transação</label>
+                                <div class="addarrow">
+                                    <select class="input empty" id="tipo" name="tipo" onclick="validacaoTipo.innerHTML = ''">
+                                        <option value="">Selecione</option>
+                                        <option value="Compra">Compra</option>
+                                        <option value="Venda">Venda</option>
+                                    </select>  
+                                    <div id="validacaoTipo" class="validacao"></div>                                                                                                     
+                                </div>  <!------------------------------------------------------------------------------------DIV FINAL TIPO DE TRANSACAO--> 
+                                                                        
+                            </div>
+                                <div class="divinputmaior nomemerc"> <!-------------------DIV INICIO NOME DA MERCADORIA-->
+                                <label for="mercadoria">Nome da mercadoria</label>
+                                <input type="text" id="mercadoria" name="mercadoria" class="input" placeholder="Digite aqui" onkeypress="validacaoMercadoria.innerHTML = ''" >
+                                <div id="validacaoMercadoria" class="validacao"></div><!-------DIV VALIDACAO--> 
+                            </div><!-----------------------------------------------------------------------------------DIV FINAL NOME DA MERCADORIA-->
+                            <div class="valor"> <!------------------------------------------------------DIV INICIO VALOR-->
+                                <label for="valor">Valor</label>
+                                <input type="numeric" id="valor" name="valor" class="input" placeholder="R$ 0,00" onkeypress="validacaoValor.innerHTML = ''">
+                                <div id="validacaoValor" class="validacao"></div><!-------DIV VALIDACAO--> 
+                                <div class="button_box">
+                                    <button class="button" type="submit" value="Adicionar transação" id="button_input">Adicionar Transação</button>
+                                </div>
+            
+
+                            </div><!--DIV FINAL VALOR-->
+                          
+                          
+                        </form>
+                        <!--------------------------------------------------------------FIM DO FORMULARIO------------------------------------------------------->
+                    </section>
+                    <!-----------------------------------------------------inicio conteudo extrato-------------------------------------------------------------->
+                    <div class="container_table">
+                        <table id="tabela">
+                            <p>Extrato de transações</p>
+                            <tr>
+                                <th></th>
+                                <th class="left weight">Mercadoria</th>
+                                <th class="right weight">Valor</th>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="border"></td>
+                            </tr>
+                            <tbody id="content-table"> <!-- CONTEUDO DINAMICO -->
+                                <tr>
+                                    <td colspan="3">
+                                        Nenhuma transação cadastrada.
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tr></tr>
+                            <tr>
+                                <td colspan="3" class="border_bottom"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="left weight">Total</td>
+                                <td class="right weight" id="campoTotal"></td>
+                            </tr>
+                            <tr>
+                                <td class="right small" colspan="3" id="campoLucro"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+              
+         </main>
+         <script>
+            listarTransacoes()
+            getJson()
+        </script>
+                
+    </body>
+</html>                   
+                        
+                        
+                        
+                                          
+                    
+             
+          

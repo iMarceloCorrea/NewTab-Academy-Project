@@ -1,0 +1,259 @@
+* {    
+  padding: 0;
+  margin: 0;
+}
+body {    
+    margin: 0;
+    position: relative;
+    font-family: 'latoregular';
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+header {    
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px 20px;
+}
+header div.wrapper {    
+   
+    position: relative;
+    width: 100%;
+    max-width: 1100px; 
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;    
+}
+header div.wrapper h1 {
+    width: auto;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+}
+header div.wrapper div.responsive-menu {    
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;   
+}
+#hamburger{
+    display: block;
+    width:35px;
+    border-top: 4px solid;
+    color: #333;    
+}
+#hamburger::after, #hamburger::before{
+    width: 35px;
+    height: 5px;
+    background: currentColor;
+    content: '';
+    display: block;
+    margin-top: 6px ;
+}
+.responsive-menu ul {
+    display: none;
+    list-style-type: none;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    
+    height: 100%;
+    width: 85.4%;
+    right: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 20px 0px;
+    z-index: 4;
+}
+
+#menu-x{
+    text-align: left;
+}
+.responsive-menu ul li{
+    text-align: right;
+       
+}
+.responsive-menu ul li:hover{
+    background-color: #c4c4c4;
+    color: #333;
+}
+.responsive-menu:hover ul{
+    display: block;
+}
+/* content start CONTEINEI DE TODO MEIO DO SITE*/
+div.conteudo {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    margin-bottom: 15vh;
+}
+div.conteudo div.wrapper {
+   
+    width: 100%;
+    max-width: 1140px; /*Requisito, 40px a mais para as margins e paddings das duas sections*/
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+div.conteudo section {
+   
+    padding: 20px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+/*sections titles text*/
+div.conteudo section h2 {
+    margin: 0px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+/* form section start */
+/* espaçamento na lateral esquerda aqui foi feito com margin pois o elemento tem border e padding*/
+div.conteudo section.transacao{
+    width: 400px;
+    height: 344px;
+    margin: 0 20px 0 0;
+}
+section.transacao form div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+section.transacao form div label{
+    height: 20px;
+    margin-bottom: 2px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+}
+/* posição do campo seleciona*/
+section.transacao form div .addarrow {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: #FFFFFF;    
+}
+/* tamanho do campo seleciona*/
+section.transacao form div .addarrow select{
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+}
+.container_table table {
+    font-size: 0.875rem;
+    width: 100%;
+}
+.container_table table .weight {
+    font-weight: 700;
+}
+.container_table table .left {
+    text-align: start;
+    vertical-align: top;
+    width: 231px;
+}
+.container_table table .right {
+    text-align: end;
+    vertical-align: top;
+    padding-right: 15px;
+}
+.container_table table th {
+    padding: 4px 0px;
+}
+.border {
+    border-bottom: 1px solid #979797;
+    padding: 0;
+}
+.border_bottom {
+    border-bottom: 1px solid #979797;
+    padding: 0;
+}
+section.transacao form div .input{    
+    height: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #979797;  
+    border-radius: 4px;
+    padding: 0px 12px;
+    font-family: 'latoregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+/* campo selecione transparente*/
+section.transacao form div #tipot.empty { 
+    color: #888888;
+    opacity: 1;
+    font-weight: normal;
+}
+/*cor da fonte da seleção */
+section.transacao form div select option {
+    color: black;
+}
+/*button adicionar transação */
+.button {
+    width: 100%;
+    height: 32px;
+    background-color: #333333;
+    border-radius: 4px;
+    border-style: none;
+    font-style: normal;
+    font-weight: normal;   
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;    
+}
+/* alinhamento extrato de transações*/
+
+
+
+
+
+.conteudo .wrapper .transacao #form div.validacao{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.container_table {
+    width: 62%;
+    height: 41vh;
+    margin: 0;
+    padding: 20px 0;
+    overflow: auto;
+}
+.container_table p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 19px;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+
+
+
+
+
+

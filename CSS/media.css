@@ -1,0 +1,176 @@
+@media screen and (min-width: 800px){
+    a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+    } 
+    
+}
+@media screen and (min-width: 769px){
+    
+header div#hamburger {
+        display: none;
+}
+    
+header div.wrapper div.responsive-menu div.menubar ul{
+       
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        padding: inherit;
+        width: 522px;
+        font-weight: 600;
+        color: #333333;       
+}
+#menu-x{
+       
+        display: none;
+    } 
+}
+.responsive-menu ul li {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    padding: 10px 20px;
+    transition: background-color 1s ease;
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+}
+a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    
+}
+.responsive-menu ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 25%;
+    height: 50%;
+    border-left: 1px solid #979797;
+}
+/*.responsive-menu ul {
+    position: fixed;
+}*/
+@media screen and (max-width: 768px)  {
+         
+header div.wrapper h1 {
+    margin-left: auto; 
+}
+.responsive-menu ul {
+    position: fixed;
+}  
+div.conteudo div.wrapper {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.conteudo div.wrapper section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    box-sizing: border-box; 
+}
+    
+div.conteudo div.wrapper {
+    padding: 0px 20px;
+}
+
+section.transacao form {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+section.transacao form div {
+    box-sizing: border-box;
+        
+}
+section.transacao form div.divinputmaior {
+    width: 50%;
+    padding: 0px 20px;
+} 
+a{
+    color: white;
+}   
+}
+@media screen and (max-width: 520px){
+
+div.conteudo div.wrapper {
+    margin-top: 10px;
+}
+
+div.conteudo div.wrapper section.transacao {
+    padding: 0px;
+    border: none;
+    border-bottom: 1px solid #979797;
+}
+
+div.conteudo div.wrapper section.transacao h2 {
+    display: none;
+}
+
+div.conteudo div.wrapper section.transacao form {
+    flex-direction: column;
+}
+
+div.conteudo div.wrapper section.transacao form div {
+    padding: 0px;
+    margin: 5px 0px;
+    width: auto;
+}
+
+section.transacao form button {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+   
+}
+
+/* DELETADOS <h2>Extrato de transações</h2>
+                        <div class="table" id="table">
+                            <div class="row" id="table-header"> 
+                                <div class="col">&nbsp;&nbsp;&nbsp;</div>
+                                <div class="col">Mercadoria</div>
+                                <div class="col">Valor</div>
+                            </div>
+                            <div class="sinal">
+                                + 
+                                <div class="paragrafo1">
+                                    Lorem ipsum dolor sit amet consectetur
+
+                                </div>
+                                <div class="valor">
+                                    <p>R$ 12.999,99</p>
+                                  </div>
+                            </div>
+                            
+                            <div class="row" id="table-footer">
+                                
+                                
+                               
+                                <div class="col">&nbsp;&nbsp;&nbsp;</div>
+                                
+                                <div class="col">Total</div>
+                                
+                                <div class="col"> <div id="total">R$ 0,00</div>[LUCRO]</div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                   
+                </div>
+            </div>*/
